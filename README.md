@@ -1,30 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Anywhere2
 
-## Getting Started
+**Anywhere2** is a major rewriting of the **Anywhere output as a service** platform with modular and pluggable external output plugins.
 
-First, run the development server:
+**Anywhere2** is build with next.js + tailwind css.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Requirements
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Node.js version >= 12.0
+- Mongodb
 
-## Learn More
+#### Installations
 
-To learn more about Next.js, take a look at the following resources:
+- Clone this project
+- `yarn install`
+- `yarn run setupdb`
+- `yarn run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### TODO List
 
-## Deploy on Vercel
+- Make dummy ui and all pages linked with live code editor. 
+- Figure out how to deal CRUD operation with mongodb database.
+- Create full API in next.js and mongodb.
+- Authentication with github and google.
+- Figure out to connecting external plugins.
+- Make sample of 1 external plugins.
+- Hosts the project on Kukoding github organization.
+- Trial deployment on Vercel and setup fully CI/CD pipelines.
+- Dealing with technical and user guide documentation.
+- Final testing and bug fixing.
+- Promote first release.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+&copy; 2022 With <3 Didit Velliz
