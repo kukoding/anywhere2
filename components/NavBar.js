@@ -2,7 +2,12 @@ import React from "react";
 
 import Link from "next/link";
 
+import {useSession, signIn, signOut} from "next-auth/react"
+
 const NavBar = () => {
+
+    const {data: session, status} = useSession();
+
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">
@@ -35,7 +40,7 @@ const NavBar = () => {
                             </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><a onClick={() => signOut()}>Logout</a></li>
                     </ul>
                 </div>
             </div>

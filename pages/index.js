@@ -2,6 +2,7 @@ import React from "react";
 import {useSession, signIn, signOut} from "next-auth/react"
 
 import Head from "next/head";
+import Link from "next/link";
 
 const Index = () => {
 
@@ -39,9 +40,19 @@ const Index = () => {
                         <a href="#" className="hover:text-darkGrayishBlue">Carers</a>
                         <a href="#" className="hover:text-darkGrayishBlue">Community</a>
                     </div>
-                    <a className="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight" href="">
-                        Get Started
-                    </a>
+                    {session
+                        ?
+                        <Link href="/dashboard">
+                            <button className="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight">
+                                {session.user.email}
+                            </button>
+                        </Link>
+                        :
+                        <a onClick={() => signIn()} className="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight" href="#">
+                            Register
+                        </a>
+                    }
+
                     <button id="menu-btn" className="open block hamburger md:hidden focus:outline-none">
                         <span className="hamburger-top"/>
                         <span className="hamburger-middle"/>
